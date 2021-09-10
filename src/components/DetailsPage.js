@@ -116,6 +116,10 @@ const DetailsPage = () => {
       <Grid item xs={12} className={classes.chartBG}>
         <StockChart />
       </Grid>
+      <Grid item xs={12} className={classes.boxTitle}>DESCRIPTION</Grid>
+      <Grid item xs={12} className={classes.chartBG}>
+        <p>{firmDetails.description}</p>
+      </Grid>
     </Grid>
   );
 };
