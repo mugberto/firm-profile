@@ -1,7 +1,11 @@
+import {
+  BrowserRouter as Router, Link, Switch, Route,
+} from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import logo from '../images/logo.png';
+import DetailsPage from './DetailsPage';
 
 const useStyle = makeStyles({
   hero: {
@@ -39,6 +43,14 @@ const useStyle = makeStyles({
     filter: 'grayscale(100%)',
     opacity: '0.5',
   },
+  boxLink: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-end',
+    justifyContent: 'space-between',
+    height: '100%',
+    textDecoration: 'none',
+  },
 });
 
 const HomePage = () => {
@@ -73,53 +85,58 @@ const HomePage = () => {
 
   ];
   return (
-    <Grid container spacing={0}>
-      <Grid item xs={12} container className={classes.hero}>
-        <Grid item xs={6} container justifyContent="flex-end" style={{ paddingRight: '8px' }}>
-          <img src={logo} alt="logo" className={classes.logo} />
-        </Grid>
-        <Grid item xs={6} container justifyContent="flex-start" alignItems="center" style={{ paddingLeft: '8px' }}>
-          <h1 style={{ lineHeight: '1', fontSize: '1.2rem' }}>
-            FIRM
-            <br />
-            <span style={{ marginLeft: '0.7em' }}>PROFILE</span>
-          </h1>
-        </Grid>
-      </Grid>
-      <Grid item xs={12} className={classes.boxTitle}>STOCK PRICES PER COMPANY</Grid>
-      {firms.map((firm, i) => {
-        if (i % 2 !== 0) {
-          if (bg === classes.boxlight) {
-            bg = classes.boxDark;
-          } else {
-            bg = classes.boxlight;
-          }
-        }
-        return (
-          <Grid
-            item
-            xs={6}
-            key={firm.symbol}
-            container
-            direction="column"
-            alignItems="flex-end"
-            justifyContent="space-between"
-            className={bg}
-          >
-            <div className={classes.icon}>
-              <ArrowRightAltIcon style={{ fontSize: '1rem' }} />
-            </div>
-            <div style={{ textAlign: 'end' }}>
-              <div className={classes.companyName}>{firm.name}</div>
-              <div className={classes.stockPrice}>
-                <span>$</span>
-                {firm.price}
-              </div>
-            </div>
+    <Router>
+      <Grid container spacing={0}>
+        <Grid item xs={12} container className={classes.hero}>
+          <Grid item xs={6} container justifyContent="flex-end" style={{ paddingRight: '8px' }}>
+            <img src={logo} alt="logo" className={classes.logo} />
           </Grid>
-        );
-      })}
-    </Grid>
+          <Grid item xs={6} container justifyContent="flex-start" alignItems="center" style={{ paddingLeft: '8px' }}>
+            <h1 style={{ lineHeight: '1', fontSize: '1.2rem' }}>
+              FIRM
+              <br />
+              <span style={{ marginLeft: '0.7em' }}>PROFILE</span>
+            </h1>
+          </Grid>
+        </Grid>
+        <Grid item xs={12} className={classes.boxTitle}>STOCK PRICES PER COMPANY</Grid>
+        {firms.map((firm, i) => {
+          if (i % 2 !== 0) {
+            if (bg === classes.boxlight) {
+              bg = classes.boxDark;
+            } else {
+              bg = classes.boxlight;
+            }
+          }
+          return (
+            <Grid
+              item
+              xs={6}
+              key={firm.symbol}
+              className={bg}
+            >
+              <Link to={`/details/${firm.symbol}`} className={classes.boxLink}>
+                <div className={classes.icon}>
+                  <ArrowRightAltIcon style={{ fontSize: '1rem' }} />
+                </div>
+                <div style={{ textAlign: 'end' }}>
+                  <div className={classes.companyName}>{firm.name}</div>
+                  <div className={classes.stockPrice}>
+                    <span>$</span>
+                    {firm.price}
+                  </div>
+                </div>
+              </Link>
+            </Grid>
+          );
+        })}
+      </Grid>
+      <Switch>
+        <Route path="/details/:symbol">
+          <DetailsPage />
+        </Route>
+      </Switch>
+    </Router>
   );
 };
 
