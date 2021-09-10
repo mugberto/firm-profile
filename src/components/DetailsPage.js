@@ -48,6 +48,7 @@ const useStyle = makeStyles({
   },
   chartBG: {
     backgroundColor: '#E84987',
+    padding: '1rem',
   },
 });
 

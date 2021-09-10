@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import Chart from 'chart.js/auto';
+import { DateTime } from 'luxon';
 import { label, data } from './data';
 
 const config = {
@@ -20,6 +21,40 @@ const config = {
         backgroundColor: 'rgb(255, 99, 132, 0)',
         borderColor: '#fff',
         pointStyle: 'star',
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          color: () => '#9998',
+        },
+        ticks: {
+          color: '#fff',
+          callback(val, i) {
+            const timeString = this.getLabelForValue(val);
+            const ftm = DateTime.fromSQL(timeString).toFormat("dd'-'LLL HH':'mm");
+            return (i % 4 === 0) ? ftm : '';
+          },
+        },
+      },
+      y: {
+        grid: {
+          color: () => '#9998',
+        },
+        ticks: {
+          color: '#fff',
+          callback(value) {
+            return `$${value}`;
+          },
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        labels: {
+          boxHeight: 1,
+          color: '#fff',
+        },
       },
     },
   },
