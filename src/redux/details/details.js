@@ -1,6 +1,6 @@
 const ADD_DATA = 'firm-profile/details/ADD_DATA';
 
-const defaultState = [];
+const defaultState = {};
 
 const detailsReducer = (state = defaultState, action) => {
   switch (action.type) {
