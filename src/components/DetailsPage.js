@@ -1,5 +1,6 @@
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
+import StockChart from './StockChart';
 
 const useStyle = makeStyles({
   hero: {
@@ -45,6 +46,9 @@ const useStyle = makeStyles({
     height: '100%',
     textDecoration: 'none',
   },
+  chartBG: {
+    backgroundColor: '#E84987',
+  },
 });
 
 const DetailsPage = () => {
@@ -89,7 +93,7 @@ const DetailsPage = () => {
         <Grid item xs={6} container justifyContent="flex-end" style={{ paddingRight: '8px' }}>
           <img src={firmDetails.image} alt="logo" className={classes.logo} />
         </Grid>
-        <Grid item xs={6} container justifyContent="flex-start" alignItems="center" style={{ paddingLeft: '8px' }}>
+        <Grid item xs={6} container direction="column" justifyContent="center" alignItems="start" style={{ paddingLeft: '8px' }}>
           <h1 style={{ lineHeight: '1', fontSize: '1.2rem' }}>
             {firmDetails.companyName}
           </h1>
@@ -108,6 +112,9 @@ const DetailsPage = () => {
         </Grid>
       </Grid>
       <Grid item xs={12} className={classes.boxTitle}>STOCK CHART</Grid>
+      <Grid item xs={12} className={classes.chartBG}>
+        <StockChart />
+      </Grid>
     </Grid>
   );
 };
