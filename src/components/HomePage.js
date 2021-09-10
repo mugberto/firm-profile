@@ -1,8 +1,11 @@
+import { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import logo from '../images/logo.png';
+import { loadData } from '../redux/home/home';
 
 const useStyle = makeStyles({
   hero: {
@@ -53,34 +56,16 @@ const useStyle = makeStyles({
 const HomePage = () => {
   const classes = useStyle();
   let bg = classes.boxlight;
-  const firms = [
-    {
-      symbol: 'fb',
-      name: 'Facebook',
-      price: 382,
-    },
-    {
-      symbol: 'AAPL',
-      name: 'Apple',
-      price: 156,
-    },
-    {
-      symbol: 'AMZN',
-      name: 'Amazon',
-      price: 3509,
-    },
-    {
-      symbol: 'NFLX',
-      name: 'Netflix',
-      price: 606,
-    },
-    {
-      symbol: 'GOOG',
-      name: 'Google',
-      price: 2885,
-    },
+  const firms = useSelector((state) => state.homeData);
 
-  ];
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (firms.length === 0) {
+      dispatch(loadData());
+    }
+  }, []);
+
   return (
     <Grid container spacing={0}>
       <Grid item xs={12} container className={classes.hero}>
