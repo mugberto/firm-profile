@@ -11,9 +11,9 @@ const homeReducer = (state = defaultState, action) => {
   }
 };
 
-const addData = (payload) => ({
+const addData = (loadData) => ({
   type: ADD_DATA,
-  payload,
+  payload: loadData.slice(0, 500),
 });
 
 export const loadData = () => (dispatch) => {

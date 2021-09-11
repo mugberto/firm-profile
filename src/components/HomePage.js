@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
@@ -6,6 +6,7 @@ import { makeStyles } from '@material-ui/core';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import logo from '../images/logo.png';
 import { loadData } from '../redux/home/home';
+import Filter from './Filter';
 
 const useStyle = makeStyles({
   hero: {
@@ -57,7 +58,14 @@ const HomePage = () => {
   const classes = useStyle();
   let bg = classes.boxlight;
 
-  const firms = useSelector((state) => state.homeData).slice(0, 100);
+  const firmsAll = useSelector((state) => state.homeData);
+
+  const [firms, setFirms] = useState(firmsAll);
+
+  const filter = (str) => {
+    const rgx = new RegExp(str, 'i');
+    setFirms(firmsAll.filter((firm) => rgx.test(firm.name)));
+  };
 
   const dispatch = useDispatch();
 
@@ -66,6 +74,10 @@ const HomePage = () => {
       dispatch(loadData());
     }
   }, []);
+
+  useEffect(() => {
+    setFirms(firmsAll);
+  }, [firmsAll]);
 
   return (
     <Grid container spacing={0}>
@@ -81,7 +93,7 @@ const HomePage = () => {
           </h1>
         </Grid>
       </Grid>
-      <Grid item xs={12} className={classes.boxTitle}>STOCK PRICES PER COMPANY</Grid>
+      <Grid item xs={12} className={classes.boxTitle}><Filter filter={filter} /></Grid>
       {firms.map((firm, i) => {
         if (i % 2 !== 0) {
           if (bg === classes.boxlight) {

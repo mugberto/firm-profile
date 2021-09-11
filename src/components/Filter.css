@@ -1,0 +1,10 @@
+.searchField {
+  background-color: #0000;
+  border: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.searchField::placeholder {
+  color: #ccc;
+  opacity: 1;
+}
