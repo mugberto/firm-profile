@@ -18,7 +18,7 @@
 FIRM PROFILE is a web application that allows user to search for a company, view its profile, and stock prices.
 This project relies on [Financial Modeling Prep API](https://financialmodelingprep.com/developer/docs) which provides companies' stock data.
 
-<!-- ![screenshot](./src/assets/screenshot.png) -->
+![screenshot](./src/images/FIRM-PROFILE.png)
 
 <!-- ### [Live Demo - Netlify]() -->
 <!-- 
