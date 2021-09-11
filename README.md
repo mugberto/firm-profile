@@ -21,9 +21,7 @@ This project relies on [Financial Modeling Prep API](https://financialmodelingpr
 
 ![screenshot](./src/images/FIRM-PROFILE.png)
 
-### [Live Demo - Netlify](https://613d05e39b3eb4e9f52d73d4--tender-allen-b1837f.netlify.app/)
-<!-- 
-### [Project Presentation - YouTube]() -->
+### [Live Demo - Netlify](https://stupefied-stonebraker-b3a00e.netlify.app/)
 
 ## Built With
 
