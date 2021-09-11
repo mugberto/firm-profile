@@ -90,6 +90,7 @@ Feel free to check the [issues page](https://github.com/mugberto/firm-profile/is
 
 ## Acknowledgements
 
+- [Nelson Sakwa on Behance](https://www.behance.net/sakwadesignstudio) for the amazing original design that the project is based on.
 - [ReactJS Organization](https://reactjs.org/) for the amazing [Documentation](https://reactjs.org/docs/getting-started.html) on React.
 - [Redux Organization](https://redux.js.org/) for the amazing [Redux Essentials Tutorial](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on Redux.
 - [Financial Modeling Prep](https://financialmodelingprep.com/) for the amazing API.
