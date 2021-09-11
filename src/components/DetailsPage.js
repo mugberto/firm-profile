@@ -70,10 +70,6 @@ const DetailsPage = () => {
     };
   }, []);
 
-  useEffect(() => {
-    document.getElementById('page-title').innerHTML = `${profileData ? profileData.companyName : ''} - Profile`;
-  }, [profileData]);
-
   const classes = useStyle();
 
   return (

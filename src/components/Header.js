@@ -2,6 +2,7 @@ import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
 import { ArrowBackIos, Settings, Mic } from '@material-ui/icons';
+import HeaderTitle from './HeaderTitle';
 
 const useStyle = makeStyles({
   headerBG: {
@@ -12,6 +13,7 @@ const useStyle = makeStyles({
 
 const Header = () => {
   const classes = useStyle();
+
   return (
     <Grid container justifyContent="space-between" className={classes.headerBG}>
       <Grid item xs={1}>
@@ -20,7 +22,7 @@ const Header = () => {
         </Button>
       </Grid>
       <Grid item xs={7} style={{ textAlign: 'center' }} container alignItems="center" justifyContent="center">
-        <span id="page-title" />
+        <HeaderTitle />
       </Grid>
       <Grid item xs={1}><Mic /></Grid>
       <Grid item xs={1}><Settings /></Grid>

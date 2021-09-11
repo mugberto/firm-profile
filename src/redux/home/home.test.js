@@ -1,16 +1,16 @@
-import homeReducer, { addData } from "./home";
+import homeReducer, { addData } from './home';
 
-const payload = [ {
-  symbol: "SPY",
-  name: "SPDR S&P 500 ETF Trust",
+const payload = [{
+  symbol: 'SPY',
+  name: 'SPDR S&P 500 ETF Trust',
   price: 451.46,
-  exchange: "New York Stock Exchange Arca"
+  exchange: 'New York Stock Exchange Arca',
 }, {
-  symbol: "CMCSA",
-  name: "Comcast Corporation",
+  symbol: 'CMCSA',
+  name: 'Comcast Corporation',
   price: 60.3,
-  exchange: "Nasdaq Global Select"
-},];
+  exchange: 'Nasdaq Global Select',
+}];
 
 const currentState = payload;
 
