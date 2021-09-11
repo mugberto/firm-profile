@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import { render, screen, fireEvent } from '../test-utils';
+import { render, screen } from '../test-utils';
 import HomePage from './HomePage';
 
 describe('HomePage', () => {
