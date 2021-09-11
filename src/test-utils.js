@@ -10,7 +10,7 @@ function render(
   {
     preloadedState,
     store = configureStore({
-      rootReducer: {
+      reducer: {
         homeData: homeReducer, detailsData: detailsReducer,
       },
       preloadedState,

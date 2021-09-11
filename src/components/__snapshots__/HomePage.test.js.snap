@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage renders page correctly 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiGrid-root MuiGrid-container"
+      >
+        <div
+          class="MuiGrid-root makeStyles-hero-1 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-6"
+            style="padding-right: 8px;"
+          >
+            <img
+              alt="logo"
+              class="makeStyles-logo-7"
+              src="logo.png"
+            />
+          </div>
+          <div
+            class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-grid-xs-6"
+            style="padding-left: 8px;"
+          >
+            <h1
+              style="line-height: 1; font-size: 1.2rem;"
+            >
+              FIRM
+              <br />
+              <span
+                style="margin-left: 0.7em;"
+              >
+                PROFILE
+              </span>
+            </h1>
+          </div>
+        </div>
+        <div
+          class="MuiGrid-root makeStyles-boxTitle-5 MuiGrid-item MuiGrid-grid-xs-12"
+        >
+          <form
+            class="inner-form-container"
+          >
+            <input
+              class="searchField"
+              name="name"
+              placeholder="Search Company"
+              type="text"
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiGrid-root MuiGrid-container"
+    >
+      <div
+        class="MuiGrid-root makeStyles-hero-1 MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-content-xs-flex-end MuiGrid-grid-xs-6"
+          style="padding-right: 8px;"
+        >
+          <img
+            alt="logo"
+            class="makeStyles-logo-7"
+            src="logo.png"
+          />
+        </div>
+        <div
+          class="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-align-items-xs-center MuiGrid-grid-xs-6"
+          style="padding-left: 8px;"
+        >
+          <h1
+            style="line-height: 1; font-size: 1.2rem;"
+          >
+            FIRM
+            <br />
+            <span
+              style="margin-left: 0.7em;"
+            >
+              PROFILE
+            </span>
+          </h1>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-root makeStyles-boxTitle-5 MuiGrid-item MuiGrid-grid-xs-12"
+      >
+        <form
+          class="inner-form-container"
+        >
+          <input
+            class="searchField"
+            name="name"
+            placeholder="Search Company"
+            type="text"
+          />
+        </form>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
