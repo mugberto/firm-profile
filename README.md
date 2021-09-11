@@ -5,6 +5,7 @@
 - [FIRM PROFILE](#firm-profile)
   - [Table of Contents](#table-of-contents)
   - [About Project](#about-project)
+    - [Live Demo - Netlify](#live-demo---netlify)
   - [Built With](#built-with)
   - [Getting Started](#getting-started)
   - [API Interactions](#api-interactions)
@@ -20,7 +21,7 @@ This project relies on [Financial Modeling Prep API](https://financialmodelingpr
 
 ![screenshot](./src/images/FIRM-PROFILE.png)
 
-<!-- ### [Live Demo - Netlify]() -->
+### [Live Demo - Netlify](https://613d05e39b3eb4e9f52d73d4--tender-allen-b1837f.netlify.app/)
 <!-- 
 ### [Project Presentation - YouTube]() -->
 
