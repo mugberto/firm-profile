@@ -1,4 +1,5 @@
 const ADD_DATA = 'firm-profile/details/ADD_DATA';
+const CLEAR_DATA = 'firm-profile/details/CLEAR_DATA';
 
 const defaultState = {};
 
@@ -6,6 +7,8 @@ const detailsReducer = (state = defaultState, action) => {
   switch (action.type) {
     case ADD_DATA:
       return action.payload;
+    case CLEAR_DATA:
+      return {};
     default:
       return state;
   }
@@ -14,6 +17,10 @@ const detailsReducer = (state = defaultState, action) => {
 const addData = (payload) => ({
   type: ADD_DATA,
   payload,
+});
+
+export const clearData = () => ({
+  type: CLEAR_DATA,
 });
 
 export const loadData = (symbol = 'GOOG') => (dispatch) => {

@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core';
 import StockChart from './StockChart';
-import { loadData } from '../redux/details/details';
+import { clearData, loadData } from '../redux/details/details';
 
 const useStyle = makeStyles({
   hero: {
@@ -65,6 +65,9 @@ const DetailsPage = () => {
 
   useEffect(() => {
     dispatch(loadData(symbol));
+    return () => {
+      dispatch(clearData());
+    };
   }, []);
 
   const classes = useStyle();

@@ -71,7 +71,7 @@ const StockChart = ({ cdata }) => {
   useEffect(() => {
     const chart = new Chart(document.getElementById('stockChart'), useConfig(data, label));
     return () => chart.destroy();
-  }, []);
+  }, [cdata]);
 
   return (
     <canvas id="stockChart" width="200" height="200" />

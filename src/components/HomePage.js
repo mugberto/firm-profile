@@ -56,7 +56,8 @@ const useStyle = makeStyles({
 const HomePage = () => {
   const classes = useStyle();
   let bg = classes.boxlight;
-  const firms = useSelector((state) => state.homeData);
+
+  const firms = useSelector((state) => state.homeData).slice(0, 100);
 
   const dispatch = useDispatch();
 
