@@ -1,70 +1,98 @@
-# Getting Started with Create React App
+# FIRM PROFILE
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
 
-## Available Scripts
+- [FIRM PROFILE](#firm-profile)
+  - [Table of Contents](#table-of-contents)
+  - [About Project](#about-project)
+  - [Built With](#built-with)
+  - [Getting Started](#getting-started)
+  - [API Interactions](#api-interactions)
+  - [Contributing](#contributing)
+  - [Authors](#authors)
+  - [Acknowledgements](#acknowledgements)
+  - [Show your support](#show-your-support)
 
-In the project directory, you can run:
+## About Project
 
-### `npm start`
+FIRM PROFILE is a web application that allows user to search for a company, view its profile, and stock prices.
+This project relies on [Financial Modeling Prep API](https://financialmodelingprep.com/developer/docs) which provides companies' stock data.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<!-- ![screenshot](./src/assets/screenshot.png) -->
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<!-- ### [Live Demo - Netlify]() -->
+<!-- 
+### [Project Presentation - YouTube]() -->
 
-### `npm test`
+## Built With
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- ReactJS
+- Redux
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Clone this repo <https://github.com/mugberto/firm-profile>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    git clone https://github.com/mugberto/firm-profile.git
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Navigate to space-travelers-hub folder/directory
 
-### `npm run eject`
+    ```bash
+    cd firm-profile
+    ```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- On the comandline, at the project's root, run ```npm install``` to install app dependencies
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Next, run ```npm start``` which will run the app in the development mode.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- ALTERNATIVELY
 
-## Learn More
+  - Just run ```npm run build``` which will build the project and generate output files into the ```build``` directory.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+  - Go to ```build``` directory and manually open ```index.html``` to interact with the app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- Run ```npm run test``` to run tests.
 
-### Code Splitting
+## API Interactions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Financial Modeling Prep API, this app is interacting/consuming the following endpoints:
 
-### Analyzing the Bundle Size
+- **Fetching company profile - Method(GET)** - <https://financialmodelingprep.com/api/v3/profile/AAPL?apikey=YOUR_API_KEY>
+- **Fetching Company list - Method(GET)** - <https://financialmodelingprep.com/api/v3/stock/list?apikey=YOUR_API_KEY>
+- **Fetching Stock Historical Prices - Method(GET)** - <https://financialmodelingprep.com/api/v3/historical-chart/1min/AAPL?apikey=YOUR_API_KEY>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Take a look at the [DOCUMENTATION](https://financialmodelingprep.com/developer/docs) for further insights.
 
-### Making a Progressive Web App
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Contributions, issues, and feature requests are welcome!
 
-### Advanced Configuration
+Feel free to check the [issues page](https://github.com/mugberto/firm-profile/issues)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+  1. Fork the Project
+  2. Create your Feature Branch (`git checkout -b feature/newFeature`)
+  3. Commit your Changes (`git commit -m 'Add some newFeature'`)
+  4. Push to the Branch (`git push -u origin feature/newFeature`)
+  5. Open a Pull Request
 
-### Deployment
+## Authors
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+👤 **Hubert Mugabo**
 
-### `npm run build` fails to minify
+- GitHub: [@githubhandle](https://github.com/mugberto)
+- Twitter: [@twitterhandle](https://twitter.com/mugberto)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/hubert-mugabo-23144b6a/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Acknowledgements
+
+- [ReactJS Organization](https://reactjs.org/) for the amazing [Documentation](https://reactjs.org/docs/getting-started.html) on React.
+- [Redux Organization](https://redux.js.org/) for the amazing [Redux Essentials Tutorial](https://redux.js.org/tutorials/essentials/part-1-overview-concepts) on Redux.
+- [Financial Modeling Prep](https://financialmodelingprep.com/) for the amazing API.
+
+## Show your support
+
+Give a ⭐️ if you like this project!
