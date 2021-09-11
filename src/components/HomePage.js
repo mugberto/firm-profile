@@ -73,6 +73,7 @@ const HomePage = () => {
     if (firms.length === 0) {
       dispatch(loadData());
     }
+    document.getElementById('page-title').innerHTML = 'All companies';
   }, []);
 
   useEffect(() => {

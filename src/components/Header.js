@@ -19,7 +19,9 @@ const Header = () => {
           <ArrowBackIos />
         </Button>
       </Grid>
-      <Grid item xs={7} style={{ textAlign: 'center' }}>Details Page</Grid>
+      <Grid item xs={7} style={{ textAlign: 'center' }} container alignItems="center" justifyContent="center">
+        <span id="page-title" />
+      </Grid>
       <Grid item xs={1}><Mic /></Grid>
       <Grid item xs={1}><Settings /></Grid>
     </Grid>
