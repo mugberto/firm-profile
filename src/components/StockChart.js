@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import Chart from 'chart.js/auto';
 import { DateTime } from 'luxon';
-import { label, data } from './data';
 
-const config = {
+const useConfig = (data, label) => ({
   type: 'line',
   data: {
     labels: label.slice(0, 9),
@@ -58,17 +58,28 @@ const config = {
       },
     },
   },
-};
+});
 
-const StockChart = () => {
+const StockChart = ({ cdata }) => {
+  if (cdata === undefined) {
+    return null;
+  }
+
+  const data = cdata.map((d) => d.close);
+  const label = cdata.map((d) => d.date);
+
   useEffect(() => {
-    const chart = new Chart(document.getElementById('stockChart'), config);
+    const chart = new Chart(document.getElementById('stockChart'), useConfig(data, label));
     return () => chart.destroy();
   }, []);
 
   return (
     <canvas id="stockChart" width="200" height="200" />
   );
+};
+
+StockChart.propTypes = {
+  cdata: PropTypes.instanceOf(Array).isRequired,
 };
 
 export default StockChart;
