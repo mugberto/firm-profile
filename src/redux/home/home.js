@@ -11,7 +11,7 @@ const homeReducer = (state = defaultState, action) => {
   }
 };
 
-const addData = (loadData) => ({
+export const addData = (loadData) => ({
   type: ADD_DATA,
   payload: loadData.slice(0, 500),
 });
