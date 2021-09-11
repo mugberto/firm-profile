@@ -14,7 +14,7 @@ const detailsReducer = (state = defaultState, action) => {
   }
 };
 
-const addData = (payload) => ({
+export const addData = (payload) => ({
   type: ADD_DATA,
   payload,
 });
